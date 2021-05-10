@@ -1,0 +1,70 @@
+clear
+clc
+%numG=[4 3];
+%denG=[1 6 5];
+%numG=[3 2];
+%denG=[2 4 5 1];
+%G1=tf(numG,denG);
+%impulse(G1)
+%G1=tf([4 3],[1 6 5]);
+
+%zG=-0.75;
+%pG=[-1 -5]; kG=4;
+%G2=zpk(zG,pG,kG);
+%G2=zpk(-0.75,[-1 -5],4);
+
+%sys = zpk(-1,[-0.2+3j,-0.2-3j],1)
+%[zG, pG, kG]=zpkdata(sys,'v')
+
+%numG1=[2 3];
+%denG1=[5 2 2];
+%zG2=-2;
+%pG2=[-0.5 -8];
+%kG2=5;
+%G1=tf(numG1,denG1)
+%G2=zpk(zG2,pG2,kG2)
+%Tzpk=G1*G2
+%Ttf=tf(G2)
+
+%H1=tf([2 6],[1 1 8]);
+%denH2=conv([1 1],[1 4 1]);
+%H2=tf([1 4],denH2);
+%T=H1+H2
+%[zT,pT,kT]=zpkdata(T,'v');
+%pH1=pole(H1);
+%pH2=pole(H2);
+
+%num=[2 3];
+%den=[5 2 2];
+%TF=tf(num,den)
+%step(TF,10);
+%my_ss=ss(TF);
+%step(TF)
+%step(my_ss)
+%eTF=tf(my_ss)
+%step(my_ss)
+
+%num = [50];
+%den = [1 4 50];
+%G = tf (num,den);
+%[y,t] = step(G,100)
+%plot(t,y);grid minor;
+%perf = stepinfo (y,t);
+%G_ss = ss(G);
+
+A=[1.6 -0.7; 
+    1 0];
+B=[0.5; 0];
+C=[0.1 0.1];
+D=0;
+
+SS=ss(A,B,C,D);
+TF=tf(SS);
+step(TF)
+
+
+%sys=ss(A,B,C,D,0.2);
+%step(sys,15)
+
+%sys = zpk(-1,[-0.2+3j,-0.2-3j],1)
+%step(sys)
